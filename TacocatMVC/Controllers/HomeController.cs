@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -23,8 +24,26 @@ namespace TacocatMVC.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Solve()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Solve(string tacocat)
+        {
+            if (string.IsNullOrWhiteSpace(tacocat))
+            {
+                return View();
+            }
+            var tacocatArray = tacocat.ToCharArray();
+            var output = new StringBuilder();
+            for(int i = tacocat.Length; i > 01; i--)
+            {
+                output.Append(tacocatArray[i - 1]);
+            }
+            ViewData["Output"] = output;
+
             return View();
         }
 
