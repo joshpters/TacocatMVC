@@ -4,17 +4,22 @@
 <h1>@ViewData["Title"]</h1>
 
 <form asp-action="Solve">
-    <div class="row text-center">
-        <div class="col">
-            <h3>Enter a word or phrase to be reversed.</h3>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <h3>Enter a word or phrase to be reversed.</h3>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <input type="text" name="tacocat" />
+        <div class="row">
+            <div class="col">
+                <input type="text" name="tacocat" />
+            </div>
+            <div class="col">
+                <button type="submit"></button>
+            </div>
         </div>
-        <div class="col">
-            <button type="submit"></button>
+        <div id="output" class="row">
+            @ViewData["Output"]
         </div>
     </div>
 </form>
