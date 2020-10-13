@@ -1,7 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Tacocat";
 }
-<h1>@ViewData["Title"]</h1>
+<div class="container">
+    <div class="row text-center">
+        <div class="col">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+    </div>
+</div>
 
 <form asp-action="Solve">
     <div class="container">
@@ -10,7 +16,7 @@
                 <h3>Enter a word or phrase to be reversed.</h3>
             </div>
         </div>
-        <div class="row">
+        <div class="row text-center">
             <div class="col">
                 <input type="text" name="tacocat" />
             </div>

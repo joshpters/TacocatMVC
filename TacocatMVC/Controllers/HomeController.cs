@@ -38,7 +38,7 @@ namespace TacocatMVC.Controllers
             }
             var tacocatArray = tacocat.ToCharArray();
             var output = new StringBuilder();
-            for(int i = tacocat.Length; i > 01; i--)
+            for(int i = tacocat.Length; i > 0; i--)
             {
                 output.Append(tacocatArray[i - 1]);
             }
