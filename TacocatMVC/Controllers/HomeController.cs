@@ -44,6 +44,15 @@ namespace TacocatMVC.Controllers
             }
             ViewData["Output"] = output;
 
+            if (tacocat.ToLower().Replace(" ", "") == output.ToString().ToLower().Replace(" ", ""))
+            {
+                ViewData["status"] = "green";
+            }
+            else
+            {
+                ViewData["status"] = "red";
+            }
+
             return View();
         }
 
